@@ -1,0 +1,10 @@
+<Alloy>
+	<Window class="container" >
+		<Widget id="bgScroll" src="ar.com.jagu.ui.background.scroll"/>
+		<View layout="vertical">
+			<Widget id="bLabel" src="ar.com.jagu.ui.button.label"/>
+			<Widget id="bIcon" src="ar.com.jagu.ui.button.icon"/>
+			<Widget id="sw" src="ar.com.jagu.ui.switch"/>
+		</View>
+	</Window>
+</Alloy>

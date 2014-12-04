@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="background">
+		<ImageView id="img" class="ar.com.jagu.ui.background.scroll.img"/>
+		<ImageView id="reply" class="ar.com.jagu.ui.background.scroll.img"/>
+	</View>
+</Alloy>

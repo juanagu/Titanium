@@ -1,0 +1,18 @@
+"#index":{
+	backgroundColor: 'white'
+},
+"#bgScroll":{
+	backgroundImage: '/images/bg.jpg'
+},
+"#bLabel":{
+	top: '10dp',
+	backgroundColor: 'red',
+	borderRadius: '8dp',
+	label:{
+		color: 'white',
+		text: 'ButtonLabel'
+	}
+},
+"#bIcon":{
+	icon: '/images/icon-conf.png'
+}

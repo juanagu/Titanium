@@ -1,0 +1,16 @@
+"#button":{
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+},
+"#label":{
+	font:{
+		fontSize: '16dp'
+	},
+	backgroundImage: 'none',
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE,
+	left: '8dp',
+	right: '8dp',
+	top: '4dp',
+	bottom: '4dp'
+}

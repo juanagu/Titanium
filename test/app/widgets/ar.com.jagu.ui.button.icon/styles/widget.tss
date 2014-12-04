@@ -1,0 +1,13 @@
+"#button":{
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE,
+	touchEnabled: true
+},
+"#icon":{
+	left: '8dp',
+	right: '8dp',
+	top: '8dp',
+	bottom: '8dp',
+	height: '32dp',
+	width: '32dp'
+}

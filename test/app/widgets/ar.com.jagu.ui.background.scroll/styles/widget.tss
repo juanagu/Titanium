@@ -1,0 +1,11 @@
+"#background":{
+	layout: 'vertical',
+	height:Ti.UI.FILL,
+	width:Ti.UI.FILL,
+	top: 0,
+	zIndex: 0
+},
+".ar.com.jagu.ui.background.scroll.img":{
+	height:Ti.UI.SIZE,
+	width:Ti.UI.FILL
+}

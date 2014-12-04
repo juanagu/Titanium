@@ -1,0 +1,31 @@
+"#widget":{
+	width: '40dp',
+	height:Ti.UI.SIZE,
+	touchEnabled: true,
+	backgroundColor: 'transparent'
+},
+"#left":{
+	left: '1dp'
+},
+"#right":{
+	right: '1dp'
+},
+"#center":{
+	height: '16dp',
+	width: '26dp'
+}
+".ar.com.jagu.ui.check.circle":{
+	borderRadius: '8dp',
+	height: '16dp',
+	width: '16dp'
+},
+".ar.com.clarika.ui.check.color":{
+	backgroundColor: '#bbbbbb'
+},
+"#sw":{
+	height: '24dp',
+	width: '24dp',
+	borderRadius: '12dp',
+	zIndex: 999,
+	backgroundColor: 'red',
+}

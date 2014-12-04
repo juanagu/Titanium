@@ -1,0 +1,8 @@
+<Alloy>
+	<View>
+		<View id="left" class="ar.com.jagu.ui.check.circle ar.com.clarika.ui.check.color"/>
+		<View id="center" class="ar.com.clarika.ui.check.color"/>
+		<View id="right" class="ar.com.jagu.ui.check.circle ar.com.clarika.ui.check.color"/>
+		<View id="sw"/>
+	</View>
+</Alloy>
