@@ -1,0 +1,96 @@
+".fill_size":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE
+},
+".size_fill":{
+	width: Ti.UI.SIZE,
+	height: Ti.UI.FILL
+},
+".fill":{
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+},
+".size":{
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+},
+".top":{
+	top: 0
+},
+".left":{
+	left: 0
+},
+".right":{
+	right: 0
+},
+".bottom":{
+	bottom: 0
+},
+".horizontal":{
+	layout: 'horizontal'
+},
+".vertical":{
+	layout: 'vertical'
+},
+".touchEnabled":{
+	touchEnabled: true
+},
+".hidden":{
+	visible: false,
+	height: 0,
+	width: 0
+},
+"ListView[platform=ios]":{
+	allowsSelection: false,
+	separatorStyle: Ti.UI.iPhone.TableViewSeparatorStyle.NONE
+},
+".text_left":{
+	text: Ti.UI.TEXT_ALIGNMENT_LEFT
+},
+".text_center":{
+	text: Ti.UI.TEXT_ALIGNMENT_CENTER
+},
+".text_right":{
+	text: Ti.UI.TEXT_ALIGNMENT_RIGHT
+},
+".small_loader[platform=android]":{
+	style: Ti.UI.ActivityIndicatorStyle.PLAIN
+},
+".small_loader[platform=ios]":{
+	style: Ti.UI.iPhone.ActivityIndicatorStyle.PLAIN
+},
+".big_loader[platform=android]":{
+	style: Ti.UI.ActivityIndicatorStyle.BIG
+}
+".big_loader[platform=ios]":{
+	style: Ti.UI.iPhone.ActivityIndicatorStyle.BIG
+},
+"TableViewRow":{
+	selectionStyle: 'none',
+	selectedColor: 'none'
+},
+"TableView":{
+	separatorStyle: 'none',
+	separatorColor: 'transparent'
+},
+".text_micro":{
+	font:{
+		fontSize: '12dp'
+	}
+},
+".text_small":{
+	font:{
+		fontSize: '14dp'
+	}
+},
+".text_medium":{
+	font:{
+		fontSize: '18dp'
+	}
+},
+".text_large":{
+	font:{
+		fontSize: '22dp'
+	}
+}
+
