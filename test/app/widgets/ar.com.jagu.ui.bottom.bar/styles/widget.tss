@@ -1,7 +1,7 @@
 "#menu":{
 	bottom: 0,
 	height: '56dp',
-	backgroundColor: 'black'
+	backgroundColor: '#000000'
 },
 "#buttons":{
 	layout: 'horizontal',

@@ -1,6 +1,6 @@
 "#button":{
-	height: '32dp',
-	width: '32dp',
+	height: '48dp',
+	width: '48',
 	touchEnabled: true
 },
 "#icon":{

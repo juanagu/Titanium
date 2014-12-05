@@ -1,0 +1,9 @@
+<Alloy>
+	<View id="actionBar">
+		<View id="nav">
+			<View id="vNavIcon"/>
+			<Label id="title"/>
+		</View>
+		<View id="actionIcons"/>
+	</View>
+</Alloy>

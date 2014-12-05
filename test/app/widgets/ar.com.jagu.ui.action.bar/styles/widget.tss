@@ -1,0 +1,32 @@
+"#actionBar":{
+	top: 0,
+	height: '56dp',
+	backgroundColor: '#E57373'
+},
+"#actionIcons":{
+	right: '4dp',
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE,
+	layout: 'horizontal'
+},
+"#title":{
+	backgroundImage: 'none',
+	left: '16dp',
+	color: 'white',
+	font:{
+		fontSize: '22dp'
+	},
+	text: 'Title',
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+},
+"#nav":{
+	left: 0,
+	layout: 'horizontal',
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+},
+"#vNavIcon":{
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+}

@@ -23,11 +23,14 @@ var ButtonIcon = {
 	},
 	//simulate click
 	behaviour : function() {
-		var color = $.button.backgroundColor;
-		$.button.backgroundColor = '#999999';
+		
+		var color = $.button.backgroundColor || 'transparent';
+		var behaviourColor = color == 'transparent' ? '#CC999999' : color.replace('#', '#CC');
+		$.button.backgroundColor = behaviourColor;
+		
 		setTimeout(function() {
 			$.button.backgroundColor = color;
-		}, 150);
+		}, 100);
 	}
 };
 

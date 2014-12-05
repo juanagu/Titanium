@@ -1,12 +1,9 @@
-"#index":{
-	backgroundColor: 'white'
-},
 "#bgScroll":{
 	backgroundImage: '/images/bg.jpg'
 },
 "#bLabel":{
 	top: '10dp',
-	backgroundColor: 'red',
+	backgroundColor: '#FE2E2E',
 	borderRadius: '8dp',
 	label:{
 		color: 'white',

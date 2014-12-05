@@ -1,5 +1,5 @@
 var MenuBottom = {
-	TAG : 'ar.com.jagu.ui.menu.bottom',
+	TAG : 'ar.com.jagu.ui.bottom.bar',
 	isVisible : true,
 	/**
 	 * add button menu
@@ -8,7 +8,7 @@ var MenuBottom = {
 	 */
 	addButton : function(arguments) {
 
-		var button = new (require('alloy/widgets/ar.com.jagu.ui.menu.bottom/controllers/button'))(arguments);
+		var button = new (require('alloy/widgets/ar.com.jagu.ui.bottom.bar/controllers/button'))(arguments);
 		button.initialize();
 		$.buttons.add(button.getView());
 	},
@@ -50,19 +50,24 @@ var MenuBottom = {
 	 */
 	configureMenuDinamic : function(table) {
 		if (OS_ANDROID) {
-			var lastPosition = 0;
+			var start = 0;
 
-			table.addEventListener('scroll', function onScroll(e) {
-
-				var index = OS_ANDROID ? e.firstVisibleItem : e.contentOffset.y;
-				Ti.API.debug('scroll, index -> ' + index + ' lastPosition -> ' + lastPosition);
-				if (index > 0 && lastPosition <= index) {
-					MenuBottom.onScrollDown();
-				} else {
-					MenuBottom.onScrollUp();
-				}
-				lastPosition = index;
+			table.addEventListener('touchstart', function(e) {
+				start = e.y;
+				Ti.API.debug('touchstart ->' + JSON.stringify(e));
 			});
+
+			table.addEventListener('touchend', function(e) {
+				Ti.API.debug('touchend ->' + JSON.stringify(e));
+				var end = e.y;
+				if (start < end) {
+					MenuBottom.onScrollUp();
+
+				} else {
+					MenuBottom.onScrollDown();
+				}
+			});
+
 		}
 	}
 };

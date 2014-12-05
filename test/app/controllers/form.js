@@ -1,4 +1,4 @@
-$.index.open();
+$.form.open();
 //configure widgets
 $.bgScroll.initialize();
 $.sw.initialize();

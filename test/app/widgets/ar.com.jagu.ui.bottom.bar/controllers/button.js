@@ -1,5 +1,5 @@
 var Button = {
-	TAG : 'ar.com.clarika.ui.menu.bottom.button',
+	TAG : 'ar.com.clarika.ui.bottom.bar.button',
 	args : arguments[0] || {
 		size : 5// buttons in menu
 	},
@@ -61,11 +61,13 @@ var Button = {
 	},
 	//simulate click
 	behaviour : function() {
-		var color = $.button.backgroundColor;
-		$.button.backgroundColor = '#999999';
+		var color = $.button.backgroundColor || 'transparent';
+		var behaviourColor = color == 'transparent' ? '#40999999' : color.replace('#', '#40');
+		$.button.backgroundColor = behaviourColor;
+
 		setTimeout(function() {
 			$.button.backgroundColor = color;
-		}, 150);
+		}, 100);
 	},
 	/**
 	 * select button

@@ -1,10 +1,9 @@
 <Alloy>
-	<Window class="container" >
-		<Widget id="bgScroll" src="ar.com.jagu.ui.background.scroll"/>
-		<View layout="vertical">
-			<Widget id="bLabel" src="ar.com.jagu.ui.button.label"/>
-			<Widget id="bIcon" src="ar.com.jagu.ui.button.icon"/>
-			<Widget id="sw" src="ar.com.jagu.ui.switch"/>
+	<Window >
+		<Widget id="actionBar" src="ar.com.jagu.ui.action.bar"/>
+		<View id="content">
+			<TableView id="table"/>
 		</View>
+		<Widget id="menu" src="ar.com.jagu.ui.bottom.bar"/>
 	</Window>
 </Alloy>

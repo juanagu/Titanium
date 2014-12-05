@@ -1,16 +1,19 @@
 {
-	"global": {},
-	"env:development": {},
-	"env:test": {},
-	"env:production": {},
-	"os:android": {},
-	"os:blackberry": {},
-	"os:ios": {},
-	"os:mobileweb": {},
-	"dependencies": {
-		"ar.com.jagu.ui.background.scroll": "1.0",
-		"ar.com.jagu.ui.button.icon": "1.0",
-		"ar.com.jagu.ui.button.label": "1.0",
-		"ar.com.jagu.ui.switch": "1.0"
-	}
+    "global": {},
+    "env:development": {},
+    "env:test": {},
+    "env:production": {},
+    "os:android": {},
+    "os:blackberry": {},
+    "os:ios": {},
+    "os:mobileweb": {},
+    "dependencies": {
+        "ar.com.jagu.ui.background.scroll": "1.0",
+        "ar.com.jagu.ui.button.icon": "1.0",
+        "ar.com.jagu.ui.button.label": "1.0",
+        "ar.com.jagu.ui.switch": "1.0",
+        "ar.com.jagu.ui.bottom.bar": "1.0",
+        "ar.com.jagu.ui.action.bar": "1.0",
+        "ar.com.jagu.ui.text": "1.0"
+    }
 }
