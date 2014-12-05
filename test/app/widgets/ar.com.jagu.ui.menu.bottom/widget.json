@@ -1,0 +1,13 @@
+{
+	"id": "ar.com.jagu.ui.menu.bottom",
+	"name": "ar.com.jagu.ui.menu.bottom",
+	"description": "",
+	"author": "Juan Ignacio Agú",
+	"version": "1.0",
+	"copyright": "Clarika Copyright (c) 2014",
+	"license": "Apache 2.0",
+	"min-alloy-version": "1.0",
+	"min-titanium-version": "2.1",
+	"tags": "",
+	"platforms": "android,ios"
+}

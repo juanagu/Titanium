@@ -23,9 +23,10 @@ var ButtonLabel = {
 	},
 	//simulate click
 	behaviour : function() {
-		$.button.opacity = 0.6;
+		var color = $.button.backgroundColor;
+		$.button.backgroundColor = '#999999';
 		setTimeout(function() {
-			$.button.opacity = 1;
+			$.button.backgroundColor = color;
 		}, 150);
 	}
 };

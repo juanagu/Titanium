@@ -1,0 +1,7 @@
+"#button":{
+	touchEnabled: true
+},
+"#icon":{
+	height: '24dp',
+	width: '24dp'
+}

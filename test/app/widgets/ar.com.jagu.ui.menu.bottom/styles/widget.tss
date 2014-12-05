@@ -1,0 +1,10 @@
+"#menu":{
+	bottom: 0,
+	height: '56dp',
+	backgroundColor: 'black'
+},
+"#buttons":{
+	layout: 'horizontal',
+	width:Ti.UI.SIZE,
+	height:Ti.UI.FILL
+}
