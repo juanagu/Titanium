@@ -1,0 +1,6 @@
+<Alloy>
+	<View>
+		<TextField id="text"/>
+		<View id="divider"/>
+	</View>
+</Alloy>

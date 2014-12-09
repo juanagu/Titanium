@@ -26,6 +26,7 @@ var Button = {
 		}
 		if (Button.args.selected) {
 			Button.select();
+			Button.args.click();
 		} else if (Button.route) {
 			$.icon.opacity = 0.5;
 		}

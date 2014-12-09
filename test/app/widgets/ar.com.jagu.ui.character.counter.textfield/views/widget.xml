@@ -1,0 +1,7 @@
+<Alloy>
+	<View>
+		<TextField id="text"/>
+		<View id="divider"/>
+		<Label id="counter"/>
+	</View>
+</Alloy>

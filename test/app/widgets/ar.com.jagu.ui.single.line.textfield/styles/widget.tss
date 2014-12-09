@@ -1,0 +1,34 @@
+"#widget":{
+	height: Ti.UI.SIZE,
+	width:Ti.UI.FILL
+},
+"#text":{
+	font:{
+		fontSize: '16dp',
+		fontFamily: 'Roboto Regular'
+	},
+	color: 'white',
+	height: Ti.UI.SIZE,
+	width:Ti.UI.FILL,
+	autocorrect: false,
+	backgroundImage: 'none',
+	backgroundDisabledImage: 'none',
+	backgroundFocusedImage: 'none',
+	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT
+},
+"#text[platform=android]":{
+	top: '8dp'
+},
+"#text[platform=ios]":{
+	top: '16dp'
+},
+"#divider":{
+	height: '1dp',
+	width:Ti.UI.FILL,
+	top: '40dp',
+	bottom: '8dp',
+},
+"#divider[platform=android]":{
+	left: '12dp'
+}
+

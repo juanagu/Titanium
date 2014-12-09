@@ -25,7 +25,7 @@ var ButtonIcon = {
 	behaviour : function() {
 		
 		var color = $.button.backgroundColor || 'transparent';
-		var behaviourColor = color == 'transparent' ? '#CC999999' : color.replace('#', '#CC');
+		var behaviourColor = color == 'transparent' ? '#40999999' : color.replace('#', '#40');
 		$.button.backgroundColor = behaviourColor;
 		
 		setTimeout(function() {
