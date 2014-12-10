@@ -1,0 +1,15 @@
+<Alloy>
+	<View >
+		<Widget id="bgScroll" src="ar.com.jagu.ui.background.scroll"/>
+		<ScrollView id="scroll" layout="vertical">
+			<Widget id="bLabel" src="ar.com.jagu.ui.button.label"/>
+			<Widget id="bIcon" src="ar.com.jagu.ui.button.icon"/>
+			<Widget id="sw" src="ar.com.jagu.ui.switch"/>
+			<Widget class="single.line.textfield" src="ar.com.jagu.ui.single.line.textfield"/>
+			<Widget class="character.counter.textfield" src="ar.com.jagu.ui.character.counter.textfield"/>
+			<Widget class="character.counter.multiline" src="ar.com.jagu.ui.character.counter.multiline"/>
+			<Widget id="image" src="ar.com.jagu.ui.image.loading"/>
+			<TableView id="table"/>
+		</ScrollView>
+	</View>
+</Alloy>
