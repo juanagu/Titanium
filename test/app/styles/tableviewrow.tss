@@ -1,0 +1,9 @@
+"#row":{
+	height: '150dp',
+	backgroundColor: 'white',
+	top: '10dp'
+},
+"#image":{
+	height: '80dp',
+	width: '80dp'
+}

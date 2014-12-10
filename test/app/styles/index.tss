@@ -1,3 +1,4 @@
 "#content":{
-	top: '56dp'
+	top: '56dp',
+	bottom:'56dp'
 }

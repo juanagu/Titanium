@@ -1,0 +1,7 @@
+<Alloy>
+	<Window id="toast">
+		<View id="background">
+			<Label id="text"/>
+		</View>
+	</Window>
+</Alloy>

@@ -1,8 +1,7 @@
-<Alloy>
+	<Alloy>
 	<Window >
 		<Widget id="actionBar" src="ar.com.jagu.ui.action.bar"/>
 		<View id="content">
-			<TableView id="table"/>
 		</View>
 		<Widget id="menu" src="ar.com.jagu.ui.bottom.bar"/>
 	</Window>

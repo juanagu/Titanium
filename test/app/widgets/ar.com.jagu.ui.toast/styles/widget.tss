@@ -1,0 +1,29 @@
+"#toast":{
+	height:Ti.UI.SIZE,
+	width: '90%',
+	bottom: '56dp',
+	backgroundColor: 'transparent'
+},
+"#toast[platform=android]":{
+	modal: true
+},
+"#background":{
+	backgroundColor: '#323232',
+	borderRadius: '2dp',
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+},
+"#text":{
+	width:Ti.UI.SIZE,
+	height:Ti.UI.SIZE,
+	top: '10dp',
+	bottom: '10dp',
+	left: '24dp',
+	right: '24dp',
+	font:{
+		fontFamily: 'Roboto Regular',
+		fontSize: '14dp'
+	},
+	color: 'white',
+	backgroundImage: 'none'
+}

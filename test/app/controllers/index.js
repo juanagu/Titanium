@@ -4,16 +4,19 @@ var Index = {
 	//initialize controller
 	initialize : function() {
 
+		Alloy.Globals.Navigation = require('Navigation');
+		Alloy.Globals.Navigation.setContent($.content);
+		Index.configureIntentRecived();
 		$.index.open();
-		var section = Ti.UI.createTableViewSection();
-		for (var i = 0,
-		    j = 50; i < j; i++) {
-			section.add(Ti.UI.createTableViewRow({
-				title : 'Row ' + i
-			}));
-		};
+		/*var section = Ti.UI.createTableViewSection();
+		 for (var i = 0,
+		 j = 50; i < j; i++) {
+		 section.add(Ti.UI.createTableViewRow({
+		 title : 'Row ' + i
+		 }));
+		 };
 
-		$.table.setData([section]);
+		 $.table.setData([section]);*/
 
 		Index.configureBottomBar();
 		Index.configureActionBar();
@@ -21,9 +24,6 @@ var Index = {
 	configureBottomBar : function() {
 
 		var general = {
-			click : function() {
-				alert('click :)');
-			},
 			backgroundColor : 'transparent',
 			route : true
 		};
@@ -32,11 +32,19 @@ var Index = {
 			icon : {
 				image : '/images/ic_action_email.png'
 			},
+			click : function() {
+				var KEY_MENU = Alloy.Globals.Navigation.getKeyMenu();
+				Alloy.Globals.Navigation.openRoute(KEY_MENU.FIRST);
+			},
 			selected : true,
 		};
 		var data = {
 			icon : {
 				image : '/images/ic_action_data_usage.png'
+			},
+			click : function() {
+				var KEY_MENU = Alloy.Globals.Navigation.getKeyMenu();
+				Alloy.Globals.Navigation.openRoute(KEY_MENU.SECOND);
 			},
 		};
 
@@ -57,11 +65,19 @@ var Index = {
 			icon : {
 				image : '/images/ic_action_accounts.png'
 			},
+			click : function() {
+				var KEY_MENU = Alloy.Globals.Navigation.getKeyMenu();
+				Alloy.Globals.Navigation.openRoute(KEY_MENU.FOURTH);
+			},
 		};
 
 		var picture = {
 			icon : {
 				image : '/images/ic_action_picture.png'
+			},
+			click : function() {
+				var KEY_MENU = Alloy.Globals.Navigation.getKeyMenu();
+				Alloy.Globals.Navigation.openRoute(KEY_MENU.FIVETH);
 			},
 		};
 
@@ -75,7 +91,7 @@ var Index = {
 		_.extend(picture, general);
 		$.menu.addButton(picture);
 
-		$.menu.configureMenuDinamic($.table);
+		//$.menu.configureMenuDinamic($.table);
 	},
 	configureActionBar : function() {
 		$.actionBar.actionIcon({
@@ -103,6 +119,16 @@ var Index = {
 				alert('click accept');
 			}
 		});
+	},
+	configureIntentRecived : function() {
+		Ti.API.debug('configureIntentRecived');
+		if (OS_ANDROID) {
+			var launchIntent = Ti.App.Android.launchIntent;
+			var extra;
+			if (launchIntent.hasExtra(Ti.Android.EXTRA_TEXT) && ( extra = launchIntent.getStringExtra(Ti.Android.EXTRA_TEXT))) {
+				alert(extra);
+			}
+		}
 	}
 };
 Index.initialize();

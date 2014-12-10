@@ -1,0 +1,5 @@
+<Alloy>
+	<TableViewRow id="row" className='row' objName='row'>
+		<Widget id="image" src="ar.com.jagu.ui.image.loading"></Widget>
+	</TableViewRow>
+</Alloy>

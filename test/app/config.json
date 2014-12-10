@@ -14,6 +14,11 @@
         "ar.com.jagu.ui.switch": "1.0",
         "ar.com.jagu.ui.bottom.bar": "1.0",
         "ar.com.jagu.ui.action.bar": "1.0",
-        "ar.com.jagu.ui.text": "1.0"
+        "ar.com.jagu.ui.text": "1.0",
+        "ar.com.jagu.ui.single.line.textfield": "1.0",
+        "ar.com.jagu.ui.character.counter.textfield": "1.0",
+        "ar.com.jagu.ui.character.counter.multiline": "1.0",
+        "ar.com.jagu.ui.image.loading": "1.0",
+        "ar.com.jagu.ui.toast": "1.0"
     }
 }

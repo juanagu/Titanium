@@ -12,4 +12,28 @@
 },
 "#bIcon":{
 	icon: '/images/icon-conf.png'
+},
+".single.line.textfield":{
+	text:{
+		hintText: 'Hint text'
+	},
+	width: '250dp'
+},
+".character.counter.textfield":{
+	text:{
+		hintText: 'Hint text'
+	},
+	width: '250dp',
+	counter: '50'
+},
+".character.counter.multiline":{
+	text:{
+		hintText: 'Hint text'
+	},
+	width: '250dp',
+	counter: '50'
+},
+"#image":{
+	height: '200dp',
+	width: '200dp'
 }

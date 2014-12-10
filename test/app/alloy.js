@@ -9,3 +9,17 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+Alloy.Globals.globalAbort = function() {
+	if (Alloy.Globals.GeneralHttp) {
+		for (var i = 0,
+		    j = Alloy.Globals.GeneralHttp.length; i < j; i++) {
+			var xhr = Alloy.Globals.GeneralHttp[i];
+			if (xhr.active) {
+				xhr.active = false;
+				xhr.abort();
+			}
+		};
+		Alloy.Globals.GeneralHttp = [];
+	}
+};

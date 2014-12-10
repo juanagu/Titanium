@@ -1,0 +1,6 @@
+<Alloy>
+	<View>
+		<ImageView id="image"/>
+		<ActivityIndicator id="loader"/>
+	</View>
+</Alloy>
