@@ -44,27 +44,33 @@ var MenuBottom = {
 		}
 	},
 	/**
-	 * configureMenuDinamic: configure para que el menu se vuelva invisible cuando se realiza scroll
-	 *  hacia abajo y se vuelva visible al realizar scroll para arriba - Only Android
-	 * @param {TableView} table
+	 *dinamicBottomBar
+	 * @param {Ti.UI.VIEW} view
 	 */
-	configureMenuDinamic : function(table) {
+	dinamicBottomBar : function(view) {
 		if (OS_ANDROID) {
 			var start = 0;
-
-			table.addEventListener('touchstart', function(e) {
+			var DIFF_Y_POST = 75;
+			var DIFF_Y_NEG = -75;
+			view.addEventListener('touchstart', function(e) {
 				start = e.y;
-				Ti.API.debug('touchstart ->' + JSON.stringify(e));
+				Ti.API.debug('touchstart ->' + JSON.stringify(e.y));
 			});
 
-			table.addEventListener('touchend', function(e) {
-				Ti.API.debug('touchend ->' + JSON.stringify(e));
+			view.addEventListener('touchend', function(e) {
+				
 				var end = e.y;
-				if (start < end) {
-					MenuBottom.onScrollUp();
+				var diff = end - start;
+				
+				Ti.API.debug('touchend ->' + JSON.stringify(e.y)+' diff -> '+diff);
+				if (diff >= DIFF_Y_POST || (diff <= DIFF_Y_NEG)) {
 
-				} else {
-					MenuBottom.onScrollDown();
+					if (start < end) {
+						MenuBottom.onScrollUp();
+
+					} else {
+						MenuBottom.onScrollDown();
+					}
 				}
 			});
 
@@ -72,5 +78,5 @@ var MenuBottom = {
 	}
 };
 //public methods
-exports.configureMenuDinamic = MenuBottom.configureMenuDinamic;
+exports.dinamicBottomBar = MenuBottom.dinamicBottomBar;
 exports.addButton = MenuBottom.addButton;

@@ -1,0 +1,14 @@
+"#tabs":{
+	height: '48dp',
+	width:Ti.UI.SIZE
+},
+"#indicator":{
+	height: '2dp',
+	width:Ti.UI.SIZE,
+	zIndex: 999,
+	top: '46dp'
+}
+"#content":{
+	top: '48dp'
+}
+

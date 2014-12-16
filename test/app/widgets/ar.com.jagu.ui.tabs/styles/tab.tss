@@ -1,0 +1,16 @@
+"#tab":{
+	height: '48dp',
+	width:Ti.UI.SIZE
+},
+"#title":{
+	font:{
+		fontFamily: 'Roboto Medium',
+		size: '14dp'
+	},
+	color: 'white',
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE,
+	left: '12dp',
+	right: '12dp'
+}
+

@@ -36,4 +36,9 @@
 "#image":{
 	height: '200dp',
 	width: '200dp'
+},
+"#subheader":{
+	title:{
+		text:'Subheader'
+	}
 }

@@ -1,6 +1,7 @@
 <Alloy>
 	<View>
-		<TextField id="text"/>
+		<Label id="hintText" platform="ios" class="ar.com.jagu.ui.line.textfield.text"/>
+		<TextField id="text" class="ar.com.jagu.ui.line.textfield.text"/>
 		<View id="divider"/>
 	</View>
 </Alloy>

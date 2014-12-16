@@ -1,0 +1,5 @@
+<Alloy>
+	<View>
+		<ImageView id="icon"/>
+	</View>
+</Alloy>

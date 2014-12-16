@@ -1,6 +1,7 @@
 <Alloy>
 	<View>
-		<TextArea id="text"/>
+		<Label id="hintText" platform="ios" class="ar.com.jagu.ui.character.counter.multiline.text"/>
+		<TextArea id="text" class="ar.com.jagu.ui.character.counter.multiline.text"/>
 		<View id="divider"/>
 		<Label id="counter"/>
 	</View>

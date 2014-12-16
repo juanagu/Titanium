@@ -1,0 +1,7 @@
+"#rowGallery":{
+	height: '250dp'
+},
+"#gallery":{
+	height:Ti.UI.FILL,
+	width:Ti.UI.FILL
+}

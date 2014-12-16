@@ -14,12 +14,21 @@ var CharacterCounterMultiLine = {
 	initialize : function() {
 
 		_.extend($.widget, _.omit(CharacterCounterMultiLine.args, 'text', 'colors', 'counter'));
-		_.extend($.text, CharacterCounterMultiLine.args.text);
 
+		//set properties on text
+		if (OS_ANDROID) {
+			_.extend($.text, CharacterCounterMultiLine.args.text);
+		} else {
+			_.extend($.text, _.omit(CharacterCounterMultiLine.args.text, 'hintText'));
+			_.extend($.hintText, _.omit(CharacterCounterMultiLine.args.text, 'value', 'color'));
+
+			$.hintText.text = CharacterCounterMultiLine.args.text.hintText || '';
+		}
+		//set colors
 		if (CharacterCounterMultiLine.args.COLORS) {
 			CharacterCounterMultiLine.COLORS = CharacterCounterMultiLine.args.COLORS;
 		}
-
+		//set counter
 		if (CharacterCounterMultiLine.args.counter) {
 			CharacterCounterMultiLine.counter = CharacterCounterMultiLine.args.counter;
 		}
@@ -68,7 +77,7 @@ var CharacterCounterMultiLine = {
 	onFocus : function() {
 		if (!CharacterCounterMultiLine.error) {
 			$.divider.backgroundColor = CharacterCounterMultiLine.COLORS.FOCUS;
-			$.counter.color=CharacterCounterMultiLine.COLORS.FOCUS;
+			$.counter.color = CharacterCounterMultiLine.COLORS.FOCUS;
 		}
 	},
 	/**
@@ -77,7 +86,7 @@ var CharacterCounterMultiLine = {
 	onBlur : function() {
 		if (!CharacterCounterMultiLine.error) {
 			$.divider.backgroundColor = CharacterCounterMultiLine.COLORS.NORMAL;
-			$.counter.color=CharacterCounterMultiLine.COLORS.NORMAL;
+			$.counter.color = CharacterCounterMultiLine.COLORS.NORMAL;
 		}
 	},
 	/**
@@ -99,6 +108,10 @@ var CharacterCounterMultiLine = {
 
 		$.counter.text = length + '/' + CharacterCounterMultiLine.counter;
 
+		//simulate hintText on ios
+		if (OS_IOS) {
+			$.hintText.visible = (value.trim().length == 0);
+		}
 	},
 	/**
 	 * set counter number

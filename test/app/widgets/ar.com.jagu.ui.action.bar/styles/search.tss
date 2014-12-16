@@ -1,0 +1,27 @@
+"#widget":{
+	width:Ti.UI.FILL,
+	height:Ti.UI.SIZE,
+	touchEnabled: true
+},
+".ar.com.jagu.ui.action.bar.search.text":{
+	font:{
+		fontFamily: 'Roboto Regular',
+		fontSize: '14dp'
+	},
+	height:Ti.UI.SIZE,
+	width:Ti.UI.FILL,
+	left: '48dp',
+	right: '12dp',
+	backgroundImage:'none'
+},
+"#icon":{
+	height: '24dp',
+	width: '24dp',
+	left: '12dp'
+},
+"#loader":{
+	left: '12dp'
+},
+"#hintText":{
+	text: 'Search'
+}

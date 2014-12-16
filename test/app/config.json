@@ -19,6 +19,7 @@
         "ar.com.jagu.ui.character.counter.textfield": "1.0",
         "ar.com.jagu.ui.character.counter.multiline": "1.0",
         "ar.com.jagu.ui.image.loading": "1.0",
-        "ar.com.jagu.ui.toast": "1.0"
+        "ar.com.jagu.ui.toast": "1.0",
+        "ar.com.jagu.ui.subheader": "1.0"
     }
 }

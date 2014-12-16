@@ -6,13 +6,18 @@ var ImageLoading = {
 	//init widget
 	initialize : function() {
 		_.extend($.image, ImageLoading.args);
+		$.image.addEventListener('download', ImageLoading.download);
 	},
 	/**
 	 * download and set image
 	 * @param String url
 	 * @param Filesystem file
 	 */
-	download : function(url, file) {
+	download : function(e) {
+
+		var url = e.url;
+		var file = e.file;
+
 		//show loader
 		$.loader.show();
 		// create http client to download the image
@@ -72,9 +77,11 @@ var ImageLoading = {
 	},
 	remoteImage : function(a) {
 		a = a || {};
+		
 		var md5;
 		var needsToSave = false;
 		var file;
+		
 		if (a.image) {
 			md5 = Ti.Utils.md5HexDigest(a.image) + ImageLoading._getExtension(a.image);
 			file = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, md5);
@@ -86,7 +93,13 @@ var ImageLoading = {
 		}
 
 		if (needsToSave === true) {
-			ImageLoading.download(a.image, file);
+			
+			var params = {
+				image : a.image,
+				file : file
+			};
+			$.image.fireEvent('download', params);
+			
 		} else {
 			_.extend($.image, a);
 		}

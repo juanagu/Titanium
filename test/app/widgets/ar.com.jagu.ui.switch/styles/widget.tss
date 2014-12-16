@@ -25,6 +25,8 @@
 "#sw":{
 	height: '24dp',
 	width: '24dp',
+	top:'8dp',
+	bottom:'8dp',
 	borderRadius: '12dp',
 	zIndex: 999,
 	backgroundColor: 'red',

@@ -6,17 +6,9 @@ var Index = {
 
 		Alloy.Globals.Navigation = require('Navigation');
 		Alloy.Globals.Navigation.setContent($.content);
+		Alloy.Globals.BottomBar = $.menu;
 		Index.configureIntentRecived();
 		$.index.open();
-		/*var section = Ti.UI.createTableViewSection();
-		 for (var i = 0,
-		 j = 50; i < j; i++) {
-		 section.add(Ti.UI.createTableViewRow({
-		 title : 'Row ' + i
-		 }));
-		 };
-
-		 $.table.setData([section]);*/
 
 		Index.configureBottomBar();
 		Index.configureActionBar();
@@ -91,7 +83,6 @@ var Index = {
 		_.extend(picture, general);
 		$.menu.addButton(picture);
 
-		//$.menu.configureMenuDinamic($.table);
 	},
 	configureActionBar : function() {
 		$.actionBar.actionIcon({

@@ -1,0 +1,5 @@
+<Alloy>
+	<View>
+		<Label id="title"/>
+	</View>
+</Alloy>

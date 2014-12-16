@@ -1,0 +1,6 @@
+<Alloy>
+	<TableViewRow id="rowGallery" className='rowGallery' objName='rowGallery'>
+		<ScrollableView id="scrollableView" showPagingControl="true">
+		</ScrollableView>
+	</TableViewRow>
+</Alloy>

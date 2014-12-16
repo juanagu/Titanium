@@ -14,12 +14,23 @@ var CharacterCounterTextField = {
 	initialize : function() {
 
 		_.extend($.widget, _.omit(CharacterCounterTextField.args, 'text', 'colors', 'counter'));
-		_.extend($.text, CharacterCounterTextField.args.text);
 
+		//set properties on text
+		if (OS_ANDROID) {
+			_.extend($.text, CharacterCounterTextField.args.text);
+		} else {
+			_.extend($.text, _.omit(CharacterCounterTextField.args.text, 'hintText'));
+			_.extend($.hintText, _.omit(CharacterCounterTextField.args.text, 'value', 'color'));
+
+			$.hintText.text = CharacterCounterTextField.args.text.hintText || '';
+		}
+
+		//set colors
 		if (CharacterCounterTextField.args.COLORS) {
 			CharacterCounterTextField.COLORS = CharacterCounterTextField.args.COLORS;
 		}
 
+		//set counter
 		if (CharacterCounterTextField.args.counter) {
 			CharacterCounterTextField.counter = CharacterCounterTextField.args.counter;
 		}
@@ -37,6 +48,7 @@ var CharacterCounterTextField = {
 		$.text.addEventListener('focus', CharacterCounterTextField.onFocus);
 		$.text.addEventListener('blur', CharacterCounterTextField.onBlur);
 		$.text.addEventListener('change', CharacterCounterTextField.onChange);
+
 	},
 	/**
 	 * get value textfield
@@ -85,8 +97,10 @@ var CharacterCounterTextField = {
 	 * @param {Object} e
 	 */
 	onChange : function(e) {
+
 		var value = e.value;
 		var length = value.length;
+
 		if (value.length > CharacterCounterTextField.counter) {
 			$.divider.backgroundColor = CharacterCounterTextField.COLORS.ERROR;
 			$.counter.color = CharacterCounterTextField.COLORS.ERROR;
@@ -98,6 +112,11 @@ var CharacterCounterTextField = {
 		}
 
 		$.counter.text = length + '/' + CharacterCounterTextField.counter;
+
+		//simulate hintText on ios
+		if (OS_IOS) {
+			$.hintText.visible = (value.trim().length == 0);
+		}
 
 	},
 	/**

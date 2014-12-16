@@ -1,0 +1,13 @@
+"#widget":{
+	height: '48dp',
+	width:Ti.UI.FILL
+},
+"#title":{
+	color: '#757575',
+	font:{
+		fontFamily: 'Roboto Medium',
+		fontSize: '14dp'
+	},
+	left: '16dp',
+	height:Ti.UI.SIZE
+}

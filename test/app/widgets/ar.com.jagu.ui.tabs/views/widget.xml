@@ -1,0 +1,7 @@
+<Alloy>
+	<View>
+		<ScrollableView id="tabs"/>
+		<View id="indicator"/>
+		<ScrollableView id="content"/>
+	</View>
+</Alloy>

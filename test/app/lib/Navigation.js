@@ -177,7 +177,7 @@ var Navigation = (function() {
 		var first = newController('form');
 		var second = newController('form');
 		var fourth = newController('form');
-		var fiveth = newController('form');
+		var fiveth = newController('table');
 
 		return {
 			first : [first],

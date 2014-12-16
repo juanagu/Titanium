@@ -2,18 +2,19 @@
 	height: Ti.UI.SIZE,
 	width:Ti.UI.FILL
 },
-"#text":{
+".ar.com.jagu.ui.character.counter.multiline.text":{
 	font:{
 		fontSize: '16dp',
 		fontFamily: 'Roboto Regular'
 	},
-	color: 'white',
-
 	width:Ti.UI.FILL,
-	autocorrect: false,
 	backgroundImage: 'none',
 	backgroundDisabledImage: 'none',
-	backgroundFocusedImage: 'none',
+	backgroundFocusedImage: 'none'
+},
+"#text":{
+	color: 'white',
+	autocorrect: false,
 	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT,
 	backgroundColor: 'transparent'
 },
@@ -52,5 +53,10 @@
 },
 "#counter[platform=ios]":{
 	top: '88dp'
+},
+"#hintText[platform=ios]":{
+	top: '23dp',
+	left:'3dp',
+	color: '#9E9E9E'
 }
 

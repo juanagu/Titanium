@@ -38,3 +38,4 @@ for (var i = 0,
 
 $.table.setData([section]);
 
+Alloy.Globals.BottomBar.dinamicBottomBar($.scroll); 

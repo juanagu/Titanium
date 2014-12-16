@@ -1,0 +1,8 @@
+<Alloy>
+	<View>
+		<ActivityIndicator id="loader"/>
+		<ImageView id="icon" />
+		<Label id="hintText" class="ar.com.jagu.ui.action.bar.search.text" />
+		<TextField id="text" class="ar.com.jagu.ui.action.bar.search.text" />
+	</View>
+</Alloy>

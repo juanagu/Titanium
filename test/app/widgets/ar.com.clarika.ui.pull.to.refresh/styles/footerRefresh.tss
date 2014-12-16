@@ -1,0 +1,8 @@
+"#footerRefresh":{
+	height:Ti.UI.FILL,
+	width:Ti.UI.SIZE
+},
+"#loader":{
+	top: '4dp',
+	bottom: '4dp'
+}

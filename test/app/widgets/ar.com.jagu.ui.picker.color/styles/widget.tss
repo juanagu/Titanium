@@ -1,0 +1,5 @@
+"#widget":{
+	height: '48dp',
+	width: '48dp',
+	borderRadius: '24dp'
+}

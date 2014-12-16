@@ -1,0 +1,4 @@
+"#widget":{
+	width:Ti.UI.FILL,
+	height: '56dp'
+}

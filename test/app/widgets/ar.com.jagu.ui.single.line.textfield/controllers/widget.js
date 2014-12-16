@@ -12,8 +12,18 @@ var SingleLineTextField = {
 	//initialize widget
 	initialize : function() {
 
+		//set properties to text
 		_.extend($.widget, _.omit(SingleLineTextField.args, 'text', 'colors'));
-		_.extend($.text, SingleLineTextField.args.text);
+
+		if (OS_ANDROID) {
+			_.extend($.text, SingleLineTextField.args.text);
+		} else {
+
+			_.extend($.text, _.omit(SingleLineTextField.args.text, 'hintText'));
+			_.extend($.hintText, _.omit(SingleLineTextField.args.text, 'value', 'color'));
+
+			$.hintText.text = SingleLineTextField.args.text.hintText || '';
+		}
 
 		if (SingleLineTextField.args.COLORS) {
 			SingleLineTextField.COLORS = SingleLineTextField.args.COLORS;
@@ -25,8 +35,13 @@ var SingleLineTextField = {
 		SingleLineTextField.args = null;
 	},
 	configureListeners : function() {
+		
 		$.text.addEventListener('focus', SingleLineTextField.onFocus);
 		$.text.addEventListener('blur', SingleLineTextField.onBlur);
+		if (OS_IOS) {
+			$.text.addEventListener('change', SingleLineTextField.onChangeIos);
+		}
+		
 	},
 	/**
 	 * get value textfield
@@ -41,6 +56,11 @@ var SingleLineTextField = {
 	 */
 	setValue : function(value) {
 		$.text.value = value;
+		if (OS_IOS) {
+			SingleLineTextField.onChangeIos({
+				value : value
+			});
+		}
 	},
 	/**
 	 * set styles to state error
@@ -64,6 +84,14 @@ var SingleLineTextField = {
 		if (!SingleLineTextField.error) {
 			$.divider.backgroundColor = SingleLineTextField.COLORS.NORMAL;
 		}
+	},
+	/**
+	 * simulate hintText
+	 * @param {Object} e
+	 */
+	onChangeIos : function(e) {
+		var value = e.value;
+		$.hintText.visible = (value.trim().length == 0);
 	}
 };
 

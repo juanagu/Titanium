@@ -2,18 +2,20 @@
 	height: Ti.UI.SIZE,
 	width:Ti.UI.FILL
 },
-"#text":{
+".ar.com.jagu.ui.line.textfield.text":{
 	font:{
 		fontSize: '16dp',
 		fontFamily: 'Roboto Regular'
 	},
 	color: 'white',
-	height: Ti.UI.SIZE,
-	width:Ti.UI.FILL,
-	autocorrect: false,
 	backgroundImage: 'none',
 	backgroundDisabledImage: 'none',
 	backgroundFocusedImage: 'none',
+	height: Ti.UI.SIZE,
+	width:Ti.UI.FILL
+},
+"#text":{
+	autocorrect: false,
 	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT
 },
 "#text[platform=android]":{
@@ -26,9 +28,13 @@
 	height: '1dp',
 	width:Ti.UI.FILL,
 	top: '40dp',
-	bottom: '8dp',
+	bottom: '8dp'
 },
 "#divider[platform=android]":{
 	left: '12dp'
+},
+"#hintText[platform=ios]":{
+	top: '16dp',
+	color:'#9E9E9E'
 }
 
